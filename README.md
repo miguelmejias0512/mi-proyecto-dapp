@@ -4,7 +4,7 @@
 
 Un sistema de inversión colectiva descentralizado construido con **Scaffold-ETH 2**, que permite a los miembros depositar fondos, crear propuestas de inversión y gestionar inversiones de manera colaborativa.
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/00-Pantalla_principal_PoolInversiones.png" style="zoom:50%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/00-Pantalla_principal_PoolInversiones.png" style="zoom:50%;" />
 
 ### 1. Características
 
@@ -76,7 +76,7 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 **Paso 1.** Instalar o actualizar **NodeJs** a su versión **LTS** actual en este caso **v24.13.0**
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/01-nodejs.png"  />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/01-nodejs.png"  />
 
 **Paso 2.** Instalar o actualizar **npm** a la versión **11.7.0** ya que el node actual viene con la version de **npm** **11.6.2**
 
@@ -89,18 +89,18 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 **Paso 5.** Inciar la creación del proyecto **Scaffold-ETH** con el siguiente comando: **npx create-eth@latest**
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/02-Crea-Proy_Scaffold-ETH.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/02-Crea-Proy_Scaffold-ETH.png" style="zoom:67%;" />
 
 **Paso 6.** Asignarle un nombre al proyecto, por ejemplo: **mi-primer-dapp**
 **Paso 7.** Elegir la opción **Hardhat** durante el proceso de creación del proyecto, aunque también se puede elegir **Foundry**
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/03-Opc-Hardhat.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/03-Opc-Hardhat.png" style="zoom:67%;" />
 
 ### 2. Inicio Rápido
 
 **Paso 1.**  Una vez finalizado el proceso de creación del nuevo proyecto podemos efectuar las siguientes opciones de trabajo.
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/04-Proy_Creado.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/04-Proy_Creado.png" style="zoom:67%;" />
 
 - Ingresar al directorio del proyecto recién creado con el comando.
 
@@ -108,11 +108,11 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
   cd mi-proyecto-dapp
   ```
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/06-directorio-proy.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/06-directorio-proy.png" style="zoom:67%;" />
 
 **Paso 2.** Dentro del directorio del proyecto abrir por lo menos 4 teminales, las cuales estarán ubicadas dentro del directorio del proyecto al cual se accedió en el paso anterior
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/05-Terminales.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/05-Terminales.png" style="zoom:67%;" />
 
 * En la primera terminal se inicia una cadena de Blockchain local, ejecutando el siguiente comando:
 
@@ -160,7 +160,7 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
   http://localhost:3000/
   ```
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/08-teminales.png" style="zoom:67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/08-teminales.png" style="zoom:67%;" />
 
 > [!TIP]
 >
@@ -174,11 +174,11 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 >   yarn hardhat:test
 >   ```
 >
-> <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/09-test.png" style="zoom:67%;" />
+> <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/09-test.png" style="zoom:67%;" />
 >
-> <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/10-test.png" style="zoom:67%;" />
+> <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/10-test.png" style="zoom:67%;" />
 >
-> <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/11-test.png" style="zoom:67%;" />
+> <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/11-test.png" style="zoom:67%;" />
 >
 > - Edita tus contratos inteligentes en `packages/hardhat/contracts`.
 > - Edita la página de inicio de tu frontend en `packages/nextjs/app/page.tsx`. Para obtener orientación sobre el enrutamiento y la configuración de páginas y diseños, consulta la documentación de Next.js. - Edita tus scripts de implementación en `packages/hardhat/deploy`
@@ -192,21 +192,21 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 - **Conectar Wallet**: Conecta tu wallet de MetaMask u otra compatible
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/12-conecta.png" style="zoom: 50%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/12-conecta.png" style="zoom: 50%;" />
 
-  ![](/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/13-conecta.png)
+  ![](https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/13-conecta.png)
 
 - **Depositar Fondos**: Ve a la pestaña "Depositar" y deposita ETH (mínimo 0.01 ETH)
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/14-deposito.png" style="zoom: 67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/14-deposito.png" style="zoom: 67%;" />
 
 - **Crear Propuestas**: Como miembro activo, puedes crear propuestas de inversión
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/15-crear-propuesta.png" style="zoom: 67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/15-crear-propuesta.png" style="zoom: 67%;" />
 
 - **Retirar Fondos**: Retira tus fondos en cualquier momento desde la pestaña "Retirar"
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/16-retiro-fondo.png" style="zoom: 67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/16-retiro-fondo.png" style="zoom: 67%;" />
 
 ### 2. Para Administradores:
 
@@ -218,9 +218,9 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 - **Configurar Pool**: Ajusta el depósito mínimo según sea necesario
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/17-admin.png" style="zoom:67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/17-admin.png" style="zoom:67%;" />
 
-  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/19-admin.png" style="zoom:67%;" />
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/19-admin.png" style="zoom:67%;" />
 
 ### 3. Estructura del Proyecto
 
@@ -348,7 +348,7 @@ En el contrato inteligente `InvestmentPool.sol`, la identidad del usuario admini
 
 2. **Administradores Adicionales:** El contrato permite que existan múltiples administradores. Cualquier dirección que posea el `DEFAULT_ADMIN_ROLE` puede nombrar a nuevos administradores utilizando la función `addAdmin(address newAdmin)`.
 
-   <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/18-admin.png" style="zoom:67%;" />
+   <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/18-admin.png" style="zoom:67%;" />
 
 > [!TIP]
 >
@@ -391,7 +391,7 @@ Puedes consultar el estado de cualquier inversión propuesta para saber si fue a
 
 ## VIII. Documentación técnica detallada del contrato inteligente **InvestmentPool**
 
-<img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/20-codigo.png" style="zoom:50%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/20-codigo.png" style="zoom:50%;" />
 
 ### 1. Versión de Solidity
 
