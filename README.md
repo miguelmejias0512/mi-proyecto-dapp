@@ -6,7 +6,14 @@ Un sistema de inversión colectiva descentralizado construido con **Scaffold-ETH
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/00-Pantalla_principal_PoolInversiones.png" style="zoom:50%;" />
 
-### 1. Características
+### 1. Despliegue de la Dapp:
+
+- Address: **0xE5dF3b138272801d7d031B244D7970bBdc90EB1c**
+- Etherscan: **https://sepolia.etherscan.io/address/0xE5dF3b138272801d7d031B244D7970bBdc90EB1c**
+- Desplieque en Vercel: 
+- Github: **https://github.com/miguelmejias0512/mi-proyecto-dapp**
+
+### 2. Características
 
 - **Depósitos y Retiros**: Los usuarios pueden depositar ETH para convertirse en miembros activos y retirar sus fondos en cualquier momento
 - **Sistema de Propuestas**: Los miembros pueden crear propuestas de inversión que deben ser aprobadas por administradores
@@ -15,14 +22,14 @@ Un sistema de inversión colectiva descentralizado construido con **Scaffold-ETH
 - **Gestión de Miembros**: Sistema de membresía basado en depósitos activos
 - **Estadísticas en Tiempo Real**: Visualización del balance del pool, miembros activos y propuestas.
 
-### 2. Arquitectura y Seguridad
+### 3. Arquitectura y Seguridad
 
 El contrato hereda de dos piezas fundamentales de **OpenZeppelin**:
 
 - **AccessControl:** Permite definir roles específicos (como `ADMIN_ROLE`) para restringir funciones críticas.
 - **ReentrancyGuard:** Implementa el modificador `nonReentrant`, que protege al contrato contra ataques de reentrada durante las transferencias de fondos.
 
-### 3. Gestión de Miembros y Depósitos
+### 4. Gestión de Miembros y Depósitos
 
 El sistema rastrea a cada participante mediante una estructura `Member`:
 
@@ -30,7 +37,7 @@ El sistema rastrea a cada participante mediante una estructura `Member`:
 - **Registro de Miembros:** Cuando un usuario deposita, el contrato lo marca como activo, guarda su balance, el timestamp y actualiza un contador global de depósitos.
 - **Retiros:** Los miembros pueden retirar sus fondos en cualquier momento, siempre que tengan balance suficiente. Si el balance llega a cero, el estado del miembro pasa a ser inactivo.
 
-### 4. Ciclo de Vida de las Propuestas
+### 5. Ciclo de Vida de las Propuestas
 
 Cualquier miembro activo puede proponer una inversión. El proceso sigue un flujo lógico de estados:
 
@@ -38,7 +45,7 @@ Cualquier miembro activo puede proponer una inversión. El proceso sigue un fluj
 2. **Revisión (Admin):** Los administradores pueden revisar la propuesta y decidir si la aprueban o la rechazan.
 3. **Ejecución:** Una vez aprobada, un administrador puede ejecutarla. Esto transfiere los fondos del contrato a la dirección destino. Si la transferencia falla, el contrato revierte los cambios para proteger los fondos.
 
-### 5. Funciones Administrativas
+### 6. Funciones Administrativas
 
 El rol de administrador tiene facultades especiales para mantener la salud del pool:
 
@@ -74,35 +81,64 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 **(PASOS BÁSICOS PARA INCIAR Y PONER EN FUNCIONAMIENTO UN PROYECTO EN SCAFFOLD-ETH)**
 
-**Paso 1.** Instalar o actualizar **NodeJs** a su versión **LTS** actual en este caso **v24.13.0**
+#### **Paso 1.** Instalar o actualizar **NodeJs** 
+
+En este caso a su versión **LTS** actual **v24.13.0**
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/01-nodejs.png"  />
 
-**Paso 2.** Instalar o actualizar **npm** a la versión **11.7.0** ya que el node actual viene con la version de **npm** **11.6.2**
+#### **Paso 2.** Instalar o actualizar **npm**
 
-**Paso 3.** Instalar **GIT**
+ Ya que **NodeJS** actual viene con la version de **npm** **11.6.2** hay que actualizarlo a la versión **11.7.0** por requerimiento de **Scaffold-ETH 2**.
 
-**Paso 4.** Instalar **Yarn**, para instalar Yarn hay que efectuar los siguientes comandos en la terminal:
+#### **Paso 3.** Instalar **GIT**
 
- * **corepack enable** (las versiones mas recientes de NodeJs ya vienen con corepack y con el es la manera más fácil para instalar Yarn)
- * **corepack prepare yarn@stable --activate** (este comando instala y activa la versión más reciente de Yarn la cual es la 4.12.0)
+Tener instalado **GIT** previamente en el equipo de desarrollo.
 
-**Paso 5.** Inciar la creación del proyecto **Scaffold-ETH** con el siguiente comando: **npx create-eth@latest**
+#### **Paso 4.** Instalar **Yarn**
+
+Para instalar **Yarn** hay que efectuar los siguientes comandos en la terminal:
+
+* Las versiones mas recientes de **NodeJs** ya vienen con **corepack** y con el es la manera más fácil para instalar **Yarn**
+
+  ```bash
+  $ corepack enable
+  ```
+
+* Este comando instala y activa la versión más reciente de **Yarn** la cual es la **4.12.0**
+
+  ```bash
+  $ corepack prepare yarn@stable --activate
+  ```
+
+#### **Paso 5.** Iniciar la creación del proyecto **Scaffold-ETH** 2
+
+Desde el portal oficial de **Scaffold-ETH 2** se puede obtener el siguiente comando: **npx create-eth@latest** para realizar la correcta creación de un proyecto nuevo. Se puede acceder al portal a través del siguiente URL:
+
+```url
+https://scaffoldeth.io/
+```
+
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/02-Saffold-ETH2.png" style="zoom:50%;" />
+
+Una vez copiado el comando se ejecuta en la terminal.
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/02-Crea-Proy_Scaffold-ETH.png" style="zoom:67%;" />
 
-**Paso 6.** Asignarle un nombre al proyecto, por ejemplo: **mi-primer-dapp**
-**Paso 7.** Elegir la opción **Hardhat** durante el proceso de creación del proyecto, aunque también se puede elegir **Foundry**
+- Una vez aquí se procede a asignarle un nombre al proyecto, por ejemplo: **mi-primer-dapp**
+- Y luego elegir la opción **Hardhat** durante el proceso de creación del proyecto, aunque también se puede elegir **Foundry**
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/03-Opc-Hardhat.png" style="zoom:67%;" />
 
 ### 2. Inicio Rápido
 
-**Paso 1.**  Una vez finalizado el proceso de creación del nuevo proyecto podemos efectuar las siguientes opciones de trabajo.
+#### **Paso 1.**  Ingresar al directorio del proyecto
+
+Una vez finalizado el proceso de creación del nuevo proyecto podemos efectuar las siguientes opciones de trabajo.
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/04-Proy_Creado.png" style="zoom:67%;" />
 
-- Ingresar al directorio del proyecto recién creado con el comando.
+- Para ingresar al directorio del proyecto recién creado, se efectúa por medio del siguiente comando.
 
   ```bash
   cd mi-proyecto-dapp
@@ -110,49 +146,43 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/06-directorio-proy.png" style="zoom:67%;" />
 
-**Paso 2.** Dentro del directorio del proyecto abrir por lo menos 4 teminales, las cuales estarán ubicadas dentro del directorio del proyecto al cual se accedió en el paso anterior
+#### **Paso 2.** Abrir por lo menos 4 terminales dentro del directorio.
+
+Dentro del directorio del proyecto abrir por lo menos 4 terminales, las cuales estarán ubicadas dentro del directorio del proyecto al cual se accedió en el paso anterior.
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/05-Terminales.png" style="zoom:67%;" />
 
 * En la primera terminal se inicia una cadena de Blockchain local, ejecutando el siguiente comando:
 
   ```bash
-  yarn chain
+  $ yarn chain
   ```
-
-  
 
 * En la segunda terminal se que despliega el contrato inteligente, utilizando el siguiente comando:
 
   ```bash
-  yarn deploy
+  $ yarn deploy
   ```
-
-  
 
 * En la tercera terminal se inicia un servidor localhost donde se ejecutara la Dapp localmente en nuestro computador, a través del siguiente comando:
 
   ```bash
-  yarn start
+  $ yarn start
   ```
-
-  
 
 * En la cuarta terminal abrimos el Visual Studio Code y así poder interactuar el código del Stack, por medio del siguiente comando:
 
   ```bash
-  code .
+  $ code .
   ```
 
-  
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/20-codigo.png" style="zoom:50%;" />
 
 * Eventualmente tendremos que limpiar la memoria completamente y redesplegar el contrato haciendolo por medio del siguiente comando:
 
   ```bash
-  yarn deploy --reset
+  $ yarn deploy --reset
   ```
-
-  
 
 * Para poder ejecutar la Dapp, se realiza a través de un navegador de internet en el cual ejecutamos el siguiente link que permite acceder a la aplicación, esto nos permite ir diseñando y visualizando las modificaciones que se le van realizando a la Dapp.
 
@@ -171,10 +201,8 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 > * Podrás ejecutar pruebas al contrato por medio del siguiente comando:
 >
 >   ```bash
->   yarn hardhat:test
+>   $ yarn hardhat:test
 >   ```
->
-> <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/09-test.png" style="zoom:67%;" />
 >
 > <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/10-test.png" style="zoom:67%;" />
 >
@@ -186,7 +214,84 @@ El rol de administrador tiene facultades especiales para mantener la salud del p
 
 ------
 
-## III. Uso
+## III. Despliegue del Contrato
+
+#### 	**Paso-01: Importar cuenta Administrador**
+
+Ejecuta el siguiente comando en la terminal, para importar la clave privada del **address** que se quiere como administrador del contrato
+
+```bash
+# Ejecuta este comando, debes recordar estar dentro del directorio del proyecto
+$ yarn account:import
+```
+
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/21-yarn_import_cuenta.png" style="zoom:67%;" />
+
+> [!CAUTION]
+>
+> En este paso se genera el archivo **.env** en el directorio raíz llamado **hardhat**, este archivo contiene datos sensibles como la clave privada de el address que va actuar como administrador del contrato, así bajo ningún concepto debe ser compartido.
+>
+
+> [!TIP]
+>
+> También se puede crear el archivo `.env` con cualquier editor de texto y ubicado en la raíz del proyecto siguiendo la misma estructura que se presenta a continuación y sustituye tus **API_KEYs** respectivas para durante la ejecución del proyecto pueda utilizar las respectivas autorizaciones obtenidas por estas variables de entorno.
+>
+> ```code
+> # Infura API Key
+> # Obtén una gratis en: https://infura.io/
+> 
+> INFURA_API_KEY=tu_infura_api_key_aqui
+> # Clave privada de tu wallet (SIN el prefijo 0x)
+> 
+> # ⚠️ NUNCA compartas esta clave ni la subas a GitHub
+> PRIVATE_KEY=tu_clave_privada_sin_0x
+> 
+> # Etherscan API Key (para verificar contratos)
+> # Obtén una gratis en: https://etherscan.io/myapikey
+> ETHERSCAN_API_KEY=tu_etherscan_api_key_aqui
+> ```
+
+#### 	**Paso-02: Despliega el contrato en la Red de Sepolia.**
+
+Nuevamente en la terminal ejecuta el comando que se presenta para desplegar el contrato en la Red de pruebas Sepolia.
+
+```bash
+# Despliegue de proyecto en Red Sepolia
+$ yarn deploy --network sepolia
+```
+
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/22-yarn_deploy-sepolia.png" style="zoom:67%;" />
+
+#### 	**Paso-03: Verificación del contrato en la Red de Sepolia.**
+
+Nuevamente en la terminal ejecuta el comando que se presenta para verificar el contrato recién desplegado en la Red de pruebas Sepolia.
+
+```bash
+# Verificación del contrato recién desplegado
+$ yarn verify --network sepolia
+```
+
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/23-yarn_verifica-contrato.png" style="zoom:67%;" />
+
+De igual forma en el navegador, por medio del siguiente URL se puede acceder a la pagina de Etherscan y observar que el contrato fue verificado exitosamente:
+
+```url
+https://sepolia.etherscan.io/address/0xE5dF3b138272801d7d031B244D7970bBdc90EB1c
+```
+
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/24-contrato-verificado.png" style="zoom:50%;" />
+
+#### 	**Paso-04: Publicación de la Dapp en Vercel.**
+
+Nuevamente en la terminal ejecuta el comando que se presenta para ver
+
+
+
+
+
+------
+
+## IV. Uso
 
 ### 1. Para Usuarios Regulares:
 
@@ -257,7 +362,7 @@ El contrato incluye:
 
 ------
 
-## IV. Flujo de la propuesta de inversión
+## V. Flujo de la propuesta de inversión
 
 ### 1. Creación de la Propuesta
 
@@ -291,7 +396,7 @@ Si la transferencia es exitosa, se emite el evento `ProposalExecuted` con un ind
 
 ------
 
-## V. Seguridad del contrato en caso de retiro de fondos durante una propuesta aprobada en curso
+## VI. Seguridad del contrato en caso de retiro de fondos durante una propuesta aprobada en curso
 
 Este escenario es crucial, y su análisis es muy importante ya que revela cómo el contrato maneja la **liquidez** y protege la integridad del pool frente a retiros masivos (o "bank runs").
 
@@ -337,7 +442,7 @@ Tanto `withdraw` como `executeProposal` utilizan el modificador `nonReentrant`. 
 
 ------
 
-## VI. Quién actúa como administrador del Pool  
+## VII. Quién actúa como administrador del Pool  
 
 En el contrato inteligente `InvestmentPool.sol`, la identidad del usuario administrador se define de la siguiente manera:
 
@@ -356,7 +461,7 @@ En el contrato inteligente `InvestmentPool.sol`, la identidad del usuario admini
 
 ------
 
-## VII. Interactuando con el contrato **InvestmentPool** utilizando  MetaMask, un explorador de bloques (como Etherscan) o su interfaz web
+## VIII. Interactuando con el contrato **InvestmentPool** utilizando  MetaMask, un explorador de bloques (como Etherscan) o su interfaz web
 
 ### 1. Convertirse en Miembro (Depósito)
 
@@ -389,7 +494,7 @@ Puedes consultar el estado de cualquier inversión propuesta para saber si fue a
 
 ------
 
-## VIII. Documentación técnica detallada del contrato inteligente **InvestmentPool**
+## IX. Documentación técnica detallada del contrato inteligente **InvestmentPool**
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/20-codigo.png" style="zoom:50%;" />
 
@@ -970,3 +1075,68 @@ Estas funciones permiten la auditoría externa sin costo de gas (llamadas `view`
 - **`receive()`**: Función especial que permite al contrato recibir ETH directamente, sumándolo al balance total del pool.
 - **`fallback()`**: Función de seguridad que rechaza transacciones con datos incorrectos, solicitando el uso de `deposit()`.
 
+## Puntos adicionales
+
+
+
+### Seguridad
+
+
+
+Important
+
+- ✅ Este es un contrato de ejemplo para propósitos educativos
+- ✅ Solo funciona en la red de prueba Sepolia
+- ✅ El propietario tiene control total sobre los fondos
+- ❌ Nunca compartas tu clave privada
+- ❌ Nunca subas tu archivo .env a GitHub
+- ❌ No uses este contrato en mainnet sin una auditoría de seguridad profesional
+
+### Buenas prácticas
+
+
+
+Tip
+
+1. **Usa .gitignore**: Asegúrate de que `.env` esté en tu .gitignore
+2. **Variables de entorno**: Nunca hardcodees claves privadas en el código
+3. **Pruebas**: Siempre prueba en testnet antes de mainnet
+4. **Auditorías**: Para producción, siempre audita tu código
+
+## Material adicional de referencia
+
+
+
+- [Documentación de Hardhat](https://hardhat.org/docs)
+- [Solidity Docs](https://docs.soliditylang.org/)
+- [Sepolia Testnet](https://sepolia.dev/)
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
+
+## Licencia
+
+
+
+MIT License
+
+## Contacto
+
+
+
+- **Desarrollador**: Miguel Mejías
+- **Email**: [[mmejias.postgrado@gmail.com](mailto:mmejias.postgrado@gmail.com)]
+- **GitHub**: [@miguelmejias0512](https://github.com/miguelmejias0512)
+- **Twitter**: [@miguelmejias051](https://x.com/miguelmejias051)
+
+## Agradecimientos
+
+
+
+- [OpenZeppelin](https://openzeppelin.com/) - Inspiración en patrones de seguridad
+- [Ethereum Foundation](https://ethereum.org/) - Documentación y recursos
+- [Hardhat](https://hardhat.org/) - Framework de desarrollo.
+
+------
+
+⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub, hecho con ❤️ para la comunidad blockchain.
+
+[⬆️ Volver arriba](https://github.com/miguelmejias0512/etherwallet-tarea-01#-contrato-de-subasta---smart-contract)
