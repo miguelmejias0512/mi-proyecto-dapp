@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Address } from "@scaffold-ui/components";
 import { useAccount } from "wagmi";
-import { useTargetNetwork } from "~~/hooks/scaffold-eth";
+
 
 // import { TokenBalance } from "~~/components/investment-pool/TokenBalance";
 // import { VotingSection } from "~~/components/investment-pool/VotingSection";
@@ -22,7 +22,7 @@ import { AdminManagement } from "~~/components/investment-pool/AdminManagement";
 export default function Home() {
 // const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
-  const { targetNetwork } = useTargetNetwork();
+
 // Agregar | "tokens" | "voting" al final
 const [activeTab, setActiveTab] = useState<"deposit" | "withdraw" | "proposals" | "admin" | "manage-admins" | "tokens" | "voting">("deposit");
 // Verificar si el usuario conectado es admin

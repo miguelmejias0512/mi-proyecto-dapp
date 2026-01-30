@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { formatEther, parseEther } from "viem";
 import { useAccount } from "wagmi";
-import { Address } from "~~/components/scaffold-eth";
 import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 interface VotingSectionProps {
