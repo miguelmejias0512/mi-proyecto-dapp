@@ -7,7 +7,6 @@ import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaf
 
 export const AdminSection = () => {
   const [newMinimumDeposit, setNewMinimumDeposit] = useState("");
-  const [selectedProposalId, setSelectedProposalId] = useState<number | null>(null);
 
   const { data: allProposals, refetch: refetchProposals } = useScaffoldReadContract({
     contractName: "InvestmentPool",

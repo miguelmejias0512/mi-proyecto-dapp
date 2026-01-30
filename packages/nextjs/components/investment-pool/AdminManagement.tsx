@@ -3,8 +3,6 @@
 "use client";
 
 import { useState } from "react";
-import { parseAbi } from "viem";
-import { Address } from "@scaffold-ui/components";
 import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 export const AdminManagement = () => {

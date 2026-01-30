@@ -1,11 +1,7 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import { Address } from "@scaffold-ui/components";
-import type { NextPage } from "next";
-import { hardhat } from "viem/chains";
 import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth";
 
 // import { TokenBalance } from "~~/components/investment-pool/TokenBalance";

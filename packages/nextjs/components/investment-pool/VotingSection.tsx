@@ -143,7 +143,7 @@ export const VotingSection = ({ isMember }: VotingSectionProps) => {
               <div className="text-xs mt-1">
                 <p>• Tu voto tiene peso según tus tokens PIT (1 token = 1 voto)</p>
                 <p>• Se necesita {quorumPercentage?.toString() || "30"}% de participación (quórum)</p>
-                <p>• Se necesita >{approvalPercentage?.toString() || "50"}% de votos a favor para aprobar</p>
+                <p>• Se necesita {approvalPercentage?.toString() || "50"}% de votos a favor para aprobar</p>
                 <p>• Tienes {votingPeriod ? Number(votingPeriod) / 86400 : 7} días para votar en cada propuesta</p>
               </div>
             </div>
