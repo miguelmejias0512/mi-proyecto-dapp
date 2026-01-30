@@ -271,7 +271,7 @@ Nuevamente en la terminal ejecuta el comando que se presenta para verificar el c
 $ yarn verify --network sepolia
 ```
 
-<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/23-yarn_verifica-contrato.png" style="zoom:67%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/23-yarn_verifica-contrato.png" style="zoom:67%;" />
 
 De igual forma en el navegador, por medio del siguiente URL se puede acceder a la pagina de Etherscan y observar que el contrato fue verificado exitosamente:
 
@@ -279,7 +279,7 @@ De igual forma en el navegador, por medio del siguiente URL se puede acceder a l
 https://sepolia.etherscan.io/address/0xE5dF3b138272801d7d031B244D7970bBdc90EB1c
 ```
 
-<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/24-contrato-verificado.png" style="zoom:50%;" />
+<img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/24-contrato-verificado.png" style="zoom:50%;" />
 
 #### 	**Paso-04: Publicación de la Dapp en Vercel.**
 
