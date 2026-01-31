@@ -10,7 +10,7 @@ Un sistema de inversión colectiva descentralizado construido con **Scaffold-ETH
 
 - Address: **0xE5dF3b138272801d7d031B244D7970bBdc90EB1c**
 - Etherscan: **https://sepolia.etherscan.io/address/0xE5dF3b138272801d7d031B244D7970bBdc90EB1c**
-- Desplieque en Vercel: 
+- Implementación en Vercel: **https://inversion-pool-9q220iccn-miguels-projects-0512m3h.vercel.app/**
 - Github: **https://github.com/miguelmejias0512/mi-proyecto-dapp**
 
 ### 2. Características
@@ -281,11 +281,41 @@ https://sepolia.etherscan.io/address/0xE5dF3b138272801d7d031B244D7970bBdc90EB1c
 
 <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/24-contrato-verificado.png" style="zoom:50%;" />
 
-#### 	**Paso-04: Publicación de la Dapp en Vercel.**
+#### 	Paso-04: Implementación de la Dapp en Vercel.**
 
-Nuevamente en la terminal ejecuta el comando que se presenta para ver
+- Es posible que primero debas iniciar sesión en Vercel ejecutando:
 
+  ```bash
+  $ yarn vercel:login
+  ```
 
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/26-Vercel.png" style="zoom:67%;" />
+
+  <img src="/home/miguel/01-PROYECTO-HARDHAT/03-SCAFFOLDETH2/mi-proyecto-dapp/assets/25-Cuenta_Vercel.png" style="zoom:50%;" />
+
+- Si desea implementar directamente desde la terminal, ejecuta esto y siga los pasos para implementar en Vercel:
+
+  ```bash
+  $ yarn vercel
+  ```
+
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/28-Vercel.png" style="zoom:67%;" />
+
+- Una vez que inicies sesión (correo electrónico, GitHub, etc.), las opciones predeterminadas deberían funcionar. Te darán una URL pública.
+
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/29-Vercel.png" style="zoom:67%;" />
+
+- Si desea volver a implementar en la misma URL de producción, puede ejecutar:
+
+  ```bash
+  $ yarn vercel --prod
+  ```
+
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/32-Vercel.png" style="zoom:67%;" />
+
+- Aplicación implementada correctamente.
+
+  <img src="https://github.com/miguelmejias0512/mi-proyecto-dapp/blob/main/assets/31-Vercel.png" style="zoom:50%;" />
 
 
 
